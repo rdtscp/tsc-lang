@@ -1,2 +1,2 @@
 # tsc-lang
-Typesafe, Scalable, and Compiled Language
+TypeSafe and Compiled Language
