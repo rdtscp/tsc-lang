@@ -1,0 +1,12 @@
+{
+  "package": "helloworld",
+  "main": "helloworld.tsc",
+  "dependencies": [
+    {
+      "iolib": "iolib.tsc"
+    },
+    {
+      "stringlib": "stringlib.tsc"
+    }
+  ]
+}

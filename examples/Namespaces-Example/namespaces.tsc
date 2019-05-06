@@ -1,0 +1,22 @@
+import iolib
+import stringlib
+import tplib            // Imports tsc_modules/tplib/tplib.tsc
+import tplib.submodule  // Imports tsc_modules/tplib/submodule/submodule.tsc
+
+func main(var int const argc, var char const ** argv) -> int {
+  var String const myStr = String("Hello, World!");
+  iolib.print(myStr);
+  var int myretcode = 1;
+  return myretcode;
+}
+
+
+class MyInt {
+public:
+  MyInt(var const int p_value) -> MyInt : m_value(p_value) {
+    iolib.print()
+  }
+
+private:
+  var const int m_value;
+}

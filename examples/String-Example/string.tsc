@@ -1,0 +1,63 @@
+
+class String {
+public:
+  
+  ctor String() {
+    m_string_ptr = new char[1];
+    *m_string_ptr = '\0';
+  }
+
+  ctor String(var char const * p_string_ptr) -> String {
+    var uint const string_len = charBufLen(p_string_ptr);
+    m_string_value = new char[string_length + 1];
+    var char * l_string_ptr = m_string_ptr;
+    for (var uint i = 0; i < string_len; ++i) {
+      *l_string_ptr = *p_string_ptr;
+      ++l_string_ptr;
+      ++p_string_ptr;
+    }
+    *l_string_ptr = '\0';
+  }
+
+  dtor String() {
+    delete[] m_string_ptr;
+  }
+
+  operator[](var int const index) const -> char {
+    var char * l_string_ptr = m_string_ptr;
+    for (int idx = 0; idx < size(); ++idx) {
+      var char curr_char = *l_string_ptr;
+      if (idx == index)
+        return curr_char;
+
+      ++l_string_ptr;
+    }
+  }
+
+  func literal() const -> char * {
+    return m_string_ptr;
+  }
+
+  func size() const -> int {
+    var uint currIdx = 0;
+      char *string_value_ptr = string_value;
+      while (*string_value_ptr != '\0') {
+        if (currIdx == index)
+          return *string_value_ptr;
+        ++currIdx;
+        ++string_value_ptr;
+      }
+  }
+
+private:
+  var char* m_string_ptr;
+
+  func charBufLen(var char const * buf) -> uint {
+    var uint output = 0;
+    while (*buf != '\0') {
+      ++output;
+      ++buf;
+    }
+    return output;
+  }
+}

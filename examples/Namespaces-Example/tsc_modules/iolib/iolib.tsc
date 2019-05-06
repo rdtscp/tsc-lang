@@ -1,0 +1,7 @@
+namespace iolib {
+
+  func print(var String const p_in) -> void {
+    // Inline print functionality.
+  }
+
+}

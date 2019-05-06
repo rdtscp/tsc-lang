@@ -1,0 +1,20 @@
+import iolib
+import stringlib
+
+func main(var int const argc, var char const ** argv) -> int {
+  var String const myStr = String("Hello, World!");
+  iolib.print(myStr);
+  var int myretcode = 1;
+  return myretcode;
+}
+
+
+class MyInt {
+public:
+  MyInt(var const int p_value) -> MyInt : m_value(p_value) {
+    iolib.print()
+  }
+
+private:
+  var const int m_value;
+}

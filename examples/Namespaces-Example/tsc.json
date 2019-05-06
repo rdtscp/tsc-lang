@@ -1,0 +1,17 @@
+{
+  "package": "namespacesexample",
+  "main": null,
+  "dependencies": [
+    {
+      "iolib": "iolib.tsc"
+    },
+    {
+      "tplib": [
+        "tplib.tsc",
+        {
+          "submodule": "submodule.tsc"
+        }
+      ]
+    }
+  ]
+}
